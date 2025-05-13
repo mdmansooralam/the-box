@@ -1,0 +1,163 @@
+
+$font-family-base:"Work Sans", sans-serif;
+$enable-negative-margins: true;
+$form-select-indicator: url(../images/select-icon.svg);
+
+
+
+$accent:#F9995D;
+$primary:#2947A9;
+$neutral-900:#14171F;
+$neutral-800:#292E3D;
+$neutral-700:#3D445C;
+$neutral-600:#525B7A;
+$neutral-500:#667299;
+$neutral-400:#858EAD;
+$neutral-300:#A3AAC2;
+$neutral-200:#C2C7D6;
+$neutral-100:#E0E3EB;
+$neutral-50:#F6F8F7;
+
+$font-size-base : 1rem;
+
+$h1-font-size:                $font-size-base * 4.5 ;
+$h2-font-size:                $font-size-base * 3.75 ;
+$h3-font-size:                $font-size-base * 2.25 ;
+$h4-font-size:                $font-size-base * 1.5 ;
+$h5-font-size:                $font-size-base * 1.25 ;
+$h6-font-size:                $font-size-base * 1.125 ;
+$h7-font-size:                $font-size-base ;
+
+$input-font-size : $h6-font-size;
+$form-select-bg-size: 1.25rem;
+
+$custom-font-sizes: (
+  7: $h7-font-size,
+);
+
+
+$spacer: 1rem;
+$custom-spacers: (
+  12: $spacer * 0.75,
+  18: $spacer * 1.125,
+  20: $spacer * 1.25,
+  28: $spacer * 1.75,
+  60: $spacer * 3.75,
+  50: $spacer * 3.125,
+  36: $spacer * 2.25,
+  30: $spacer * 1.875,
+  38: $spacer * 2.375,
+  40: $spacer * 2.5,
+  44: $spacer * 2.75,
+  84: $spacer * 5.25,
+  88: $spacer * 5.5,
+  66: $spacer * 4.125,
+  72: $spacer * 4.5,
+  76: $spacer * 4.75,
+  200: $spacer * 12.5,
+  220: $spacer * 13.75,
+  100: $spacer * 6.25,
+  122: $spacer * 7.625,
+  138: $spacer * 8.625,
+);
+
+
+$custom-theme-colors: (
+    "accent": $accent,
+    "primary": $primary,
+    "neutral-900": $neutral-900,
+    "neutral-800": $neutral-800,
+    "neutral-700": $neutral-700,
+    "neutral-600": $neutral-600,
+    "neutral-500": $neutral-500,
+    "neutral-400": $neutral-400,
+    "neutral-300": $neutral-300,
+    "neutral-200": $neutral-200,
+    "neutral-100": $neutral-100,
+    "neutral-50": $neutral-50,
+
+);
+
+$custome-border-widths : (
+  6:1.4px,
+);
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1240px,
+  xxl: 1440px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1240px,
+  xxl: 1320px
+);
+
+$navbar-padding-y:1rem;
+$navbar-light-color:$neutral-900;
+$navbar-light-hover-color:$accent;
+$navbar-light-active-color:$accent;
+
+
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+@import '../node_modules/bootstrap/scss/nav';
+
+
+$theme-colors : map-merge($map1: $theme-colors, $map2: $custom-theme-colors);
+$font-sizes : map-merge($map1: $font-sizes, $map2: $custom-font-sizes);
+$spacers : map-merge($map1: $spacers, $map2: $custom-spacers);
+$border-widths: map-merge($map1: $border-widths, $map2: $custome-border-widths);
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.icon{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.link-icon{
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $neutral-700;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: white;
+
+  &:hover{
+    background-color: $accent;
+  }
+}
+
+.hr-divider{
+  width: 3.75rem;
+  height: 2px;
+  background-color: $neutral-100;
+}
+
+.custom-indicator{
+  width: .75rem !important;
+  height: .75rem !important;
+  border-radius: 50% !important;
+}
+
+@import './hero-section';
+@import './ads-section';
+@import './project-section';
+@import './fact-section';
+@import './contact-section';

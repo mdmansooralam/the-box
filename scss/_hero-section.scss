@@ -1,0 +1,38 @@
+.hero{
+
+  h1{
+    @media (max-width:575px){
+      font-size: calc(1.25rem + 3.9vw);
+    }
+  }
+
+  .carousel-caption{
+      left: auto;
+      right: 0;
+      max-width: 416px;
+      width: 35%;
+      bottom: 2.5rem;
+  }
+  
+  .carousel-btn-group{
+    width: min(35%, 416px);
+    z-index: 1;
+  }
+  
+  .carousel-btn-group button{
+    flex-grow: 1;
+  }
+  
+  .heading-wrapper{
+      top: 50%;
+      z-index: 1;
+      translate: 0 -50%;
+  }
+
+  .carousel-item{
+
+    @media (max-width:768px){
+      height: 40vh;
+    }
+  }
+}
