@@ -1,12 +1,24 @@
 
 .fact{
     .fact-item{
+
+        .fact-icon img{
+            width: 5rem ;
+            height: 5rem ;
+        }
+
+        @media (min-width:768px){
+            width: 45%;
+            flex-grow: 1;
+        }
+
         @media (min-width:991px){
             width: max-content;
             padding-right: 60px !important;
             
             .fact-icon{
                 position: absolute;
+                
             }
             .fact-icon.top-right{
                 right: 0;
