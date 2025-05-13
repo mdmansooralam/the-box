@@ -1,6 +1,12 @@
 
 .fact{
     .fact-item{
+
+        @media (min-width:768px){
+            width: 45%;
+            flex-grow: 1;
+        }
+
         @media (min-width:991px){
             width: max-content;
             padding-right: 60px !important;
